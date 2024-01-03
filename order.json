@@ -1,0 +1,38 @@
+[
+    {
+        "user": "615a6e3e2c2e3f4a8b6c7d8e",
+        "restaurant": "615a6e3e2c2e3f4a8b6c7d8f",
+        "addresses": [
+            {
+                "city": "Ankara",
+                "district": "Çankaya",
+                "fullAddress": "Sample Address 1",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [39.93, 32.85]
+                }
+            },
+            {
+                "city": "Istanbul",
+                "district": "Kadikoy",
+                "fullAddress": "Sample Address 2",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [41.01, 28.97]
+                }
+            },
+            {
+                "city": "Izmir",
+                "district": "Konak",
+                "fullAddress": "Sample Address 3",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [38.42, 27.14]
+                }
+            }
+        ],
+        "comment": "Sample comment",
+        "score": 4,
+        "dateTime": "2021-10-04T10:30:00.000Z"
+    }
+]

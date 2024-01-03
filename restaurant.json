@@ -1,0 +1,492 @@
+[{
+    "name": "Restaurant A",
+    "description": "lahmacun",
+    "logo": "logoA.jpg",
+    "address": {
+        "city": "City A",
+        "district": "District A",
+        "fullAddress": "Address A",
+        "location": {
+            "type": "Point",
+            "coordinates": [39.93, 32.85]
+        }
+    },
+    "branches": [
+        {
+            "city": "City A",
+            "district": "District A",
+            "fullAddress": "Address A",
+            "location": {
+                "type": "Point",
+                "coordinates": [39.93, 32.85]
+            }
+        },
+        {
+            "city": "City B",
+            "district": "District B",
+            "fullAddress": "Address B",
+            "location": {
+                "type": "Point",
+                "coordinates": [40.12, 32.78]
+            }
+        }
+    ],
+    "menu": [
+        {
+            "name": "Dish A",
+            "price": 10,
+            "content": "Delicious dish A",
+            "coverImage": "dishA.jpg"
+        },
+        {
+            "name": "Dish B",
+            "price": 15,
+            "content": "Delicious dish B",
+            "coverImage": "dishB.jpg"
+        }
+    ],
+    "types": ["Type A", "Type B"]
+},
+{
+    "name": "Restaurant B",
+    "description": "pizza",
+    "logo": "logoB.jpg",
+    "address": {
+        "city": "City C",
+        "district": "District C",
+        "fullAddress": "Address C",
+        "location": {
+            "type": "Point",
+            "coordinates": [41.01, 28.95]
+        }
+    },
+    "branches": [
+        {
+            "city": "City C",
+            "district": "District C",
+            "fullAddress": "Address C",
+            "location": {
+                "type": "Point",
+                "coordinates": [41.01, 28.95]
+            }
+        },
+        {
+            "city": "City D",
+            "district": "District D",
+            "fullAddress": "Address D",
+            "location": {
+                "type": "Point",
+                "coordinates": [41.02, 28.96]
+            }
+        }
+    ],
+    "menu": [
+        {
+            "name": "Dish C",
+            "price": 12,
+            "content": "Delicious dish C",
+            "coverImage": "dishC.jpg"
+        },
+        {
+            "name": "Dish D",
+            "price": 18,
+            "content": "Delicious dish D",
+            "coverImage": "dishD.jpg"
+        }
+    ],
+    "types": ["Type C", "Type D"]
+},
+{
+    "name": "Restaurant C",
+    "description": "sushi",
+    "logo": "logoC.jpg",
+    "address": {
+        "city": "City E",
+        "district": "District E",
+        "fullAddress": "Address E",
+        "location": {
+            "type": "Point",
+            "coordinates": [37.98, 23.73]
+        }
+    },
+    "branches": [
+        {
+            "city": "City E",
+            "district": "District E",
+            "fullAddress": "Address E",
+            "location": {
+                "type": "Point",
+                "coordinates": [37.98, 23.73]
+            }
+        },
+        {
+            "city": "City F",
+            "district": "District F",
+            "fullAddress": "Address F",
+            "location": {
+                "type": "Point",
+                "coordinates": [37.99, 23.74]
+            }
+        }
+    ],
+    "menu": [
+        {
+            "name": "Dish E",
+            "price": 14,
+            "content": "Delicious dish E",
+            "coverImage": "dishE.jpg"
+        },
+        {
+            "name": "Dish F",
+            "price": 20,
+            "content": "Delicious dish F",
+            "coverImage": "dishF.jpg"
+        }
+    ],
+    "types": ["Type E", "Type F"]
+},
+{
+    "name": "Restaurant D",
+    "description": "burger",
+    "logo": "logoD.jpg",
+    "address": {
+        "city": "City G",
+        "district": "District G",
+        "fullAddress": "Address G",
+        "location": {
+            "type": "Point",
+            "coordinates": [45.75, 4.85]
+        }
+    },
+    "branches": [
+        {
+            "city": "City G",
+            "district": "District G",
+            "fullAddress": "Address G",
+            "location": {
+                "type": "Point",
+                "coordinates": [45.75, 4.85]
+            }
+        },
+        {
+            "city": "City H",
+            "district": "District H",
+            "fullAddress": "Address H",
+            "location": {
+                "type": "Point",
+                "coordinates": [45.76, 4.86]
+            }
+        }
+    ],
+    "menu": [
+        {
+            "name": "Dish G",
+            "price": 16,
+            "content": "Delicious dish G",
+            "coverImage": "dishG.jpg"
+        },
+        {
+            "name": "Dish H",
+            "price": 22,
+            "content": "Delicious dish H",
+            "coverImage": "dishH.jpg"
+        }
+    ],
+    "types": ["Type G", "Type H"]
+},
+{
+    "name": "Restaurant E",
+    "description": "steak",
+    "logo": "logoE.jpg",
+    "address": {
+        "city": "City I",
+        "district": "District I",
+        "fullAddress": "Address I",
+        "location": {
+            "type": "Point",
+            "coordinates": [51.51, -0.13]
+        }
+    },
+    "branches": [
+        {
+            "city": "City I",
+            "district": "District I",
+            "fullAddress": "Address I",
+            "location": {
+                "type": "Point",
+                "coordinates": [51.51, -0.13]
+            }
+        },
+        {
+            "city": "City J",
+            "district": "District J",
+            "fullAddress": "Address J",
+            "location": {
+                "type": "Point",
+                "coordinates": [51.52, -0.14]
+            }
+        }
+    ],
+    "menu": [
+        {
+            "name": "Dish I",
+            "price": 18,
+            "content": "Delicious dish I",
+            "coverImage": "dishI.jpg"
+        },
+        {
+            "name": "Dish J",
+            "price": 24,
+            "content": "Delicious dish J",
+            "coverImage": "dishJ.jpg"
+        }
+    ],
+    "types": ["Type I", "Type J"]
+},
+{
+    "name": "Restaurant F",
+    "description": "pasta",
+    "logo": "logoF.jpg",
+    "address": {
+        "city": "City K",
+        "district": "District K",
+        "fullAddress": "Address K",
+        "location": {
+            "type": "Point",
+            "coordinates": [48.86, 2.35]
+        }
+    },
+    "branches": [
+        {
+            "city": "City K",
+            "district": "District K",
+            "fullAddress": "Address K",
+            "location": {
+                "type": "Point",
+                "coordinates": [48.86, 2.35]
+            }
+        },
+        {
+            "city": "City L",
+            "district": "District L",
+            "fullAddress": "Address L",
+            "location": {
+                "type": "Point",
+                "coordinates": [48.87, 2.36]
+            }
+        }
+    ],
+    "menu": [
+        {
+            "name": "Dish K",
+            "price": 20,
+            "content": "Delicious dish K",
+            "coverImage": "dishK.jpg"
+        },
+        {
+            "name": "Dish L",
+            "price": 26,
+            "content": "Delicious dish L",
+            "coverImage": "dishL.jpg"
+        }
+    ],
+    "types": ["Type K", "Type L"]
+},
+{
+    "name": "Restaurant G",
+    "description": "sushi",
+    "logo": "logoG.jpg",
+    "address": {
+        "city": "City M",
+        "district": "District M",
+        "fullAddress": "Address M",
+        "location": {
+            "type": "Point",
+            "coordinates": [35.68, 139.69]
+        }
+    },
+    "branches": [
+        {
+            "city": "City M",
+            "district": "District M",
+            "fullAddress": "Address M",
+            "location": {
+                "type": "Point",
+                "coordinates": [35.68, 139.69]
+            }
+        },
+        {
+            "city": "City N",
+            "district": "District N",
+            "fullAddress": "Address N",
+            "location": {
+                "type": "Point",
+                "coordinates": [35.69, 139.70]
+            }
+        }
+    ],
+    "menu": [
+        {
+            "name": "Dish M",
+            "price": 22,
+            "content": "Delicious dish M",
+            "coverImage": "dishM.jpg"
+        },
+        {
+            "name": "Dish N",
+            "price": 28,
+            "content": "Delicious dish N",
+            "coverImage": "dishN.jpg"
+        }
+    ],
+    "types": ["Type M", "Type N"]
+},
+{
+    "name": "Restaurant H",
+    "description": "burger",
+    "logo": "logoH.jpg",
+    "address": {
+        "city": "City O",
+        "district": "District O",
+        "fullAddress": "Address O",
+        "location": {
+            "type": "Point",
+            "coordinates": [37.78, -122.41]
+        }
+    },
+    "branches": [
+        {
+            "city": "City O",
+            "district": "District O",
+            "fullAddress": "Address O",
+            "location": {
+                "type": "Point",
+                "coordinates": [37.78, -122.41]
+            }
+        },
+        {
+            "city": "City P",
+            "district": "District P",
+            "fullAddress": "Address P",
+            "location": {
+                "type": "Point",
+                "coordinates": [37.79, -122.42]
+            }
+        }
+    ],
+    "menu": [
+        {
+            "name": "Dish O",
+            "price": 24,
+            "content": "Delicious dish O",
+            "coverImage": "dishO.jpg"
+        },
+        {
+            "name": "Dish P",
+            "price": 30,
+            "content": "Delicious dish P",
+            "coverImage": "dishP.jpg"
+        }
+    ],
+    "types": ["Type O", "Type P"]
+},
+{
+    "name": "Restaurant I",
+    "description": "pizza",
+    "logo": "logoI.jpg",
+    "address": {
+        "city": "City Q",
+        "district": "District Q",
+        "fullAddress": "Address Q",
+        "location": {
+            "type": "Point",
+            "coordinates": [55.75, 37.62]
+        }
+    },
+    "branches": [
+        {
+            "city": "City Q",
+            "district": "District Q",
+            "fullAddress": "Address Q",
+            "location": {
+                "type": "Point",
+                "coordinates": [55.75, 37.62]
+            }
+        },
+        {
+            "city": "City R",
+            "district": "District R",
+            "fullAddress": "Address R",
+            "location": {
+                "type": "Point",
+                "coordinates": [55.76, 37.63]
+            }
+        }
+    ],
+    "menu": [
+        {
+            "name": "Dish Q",
+            "price": 26,
+            "content": "Delicious dish Q",
+            "coverImage": "dishQ.jpg"
+        },
+        {
+            "name": "Dish R",
+            "price": 32,
+            "content": "Delicious dish R",
+            "coverImage": "dishR.jpg"
+        }
+    ],
+    "types": ["Type Q", "Type R"]
+},
+{
+    "name": "Restaurant J",
+    "description": "steak",
+    "logo": "logoJ.jpg",
+    "address": {
+        "city": "City S",
+        "district": "District S",
+        "fullAddress": "Address S",
+        "location": {
+            "type": "Point",
+            "coordinates": [45.50, -73.56]
+        }
+    },
+    "branches": [
+        {
+            "city": "City S",
+            "district": "District S",
+            "fullAddress": "Address S",
+            "location": {
+                "type": "Point",
+                "coordinates": [45.50, -73.56]
+            }
+        },
+        {
+            "city": "City T",
+            "district": "District T",
+            "fullAddress": "Address T",
+            "location": {
+                "type": "Point",
+                "coordinates": [45.51, -73.57]
+            }
+        }
+    ],
+    "menu": [
+        {
+            "name": "Dish S",
+            "price": 28,
+            "content": "Delicious dish S",
+            "coverImage": "dishS.jpg"
+        },
+        {
+            "name": "Dish T",
+            "price": 34,
+            "content": "Delicious dish T",
+            "coverImage": "dishT.jpg"
+        }
+    ],
+    "types": ["Type S", "Type T"]
+}
+]
+
