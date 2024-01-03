@@ -20,7 +20,7 @@ mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true
         console.error('Failed to connect to the database:', error);
     });
 
-// Define the schema for the User collection
+//  User collection
 
 const userSchema = new mongoose.Schema({
     username: { type: String, required: true },
@@ -32,7 +32,7 @@ const userSchema = new mongoose.Schema({
 });
 
 
-// Define the schema for the Order collection
+//  Order collection
 const orderSchema = new mongoose.Schema({
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     restaurant: { type: mongoose.Schema.Types.ObjectId, ref: 'Restaurant', required: true },
@@ -51,7 +51,7 @@ const orderSchema = new mongoose.Schema({
 });
 
 
-// Define the schema for the Restaurant collection
+//  Restaurant collection
 const restaurantSchema = new mongoose.Schema({
     name: { type: String, required: true },
     description: { type: String },
@@ -83,7 +83,7 @@ const restaurantSchema = new mongoose.Schema({
     types: [{ type: String }],
 });
 
-// Define the models based on the schemas
+//  models based on the schemas
 const User = mongoose.model('User', userSchema);
 const Order = mongoose.model('Order', orderSchema);
 const Restaurant = mongoose.model('Restaurant', restaurantSchema);
