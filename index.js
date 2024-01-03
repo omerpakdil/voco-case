@@ -92,28 +92,28 @@ const Restaurant = mongoose.model('Restaurant', restaurantSchema);
 
 // Problem 2
 
-const coordinates = [39.93, 32.85];
-const keyword = "lahmacun";
+// const coordinates = [39.93, 32.85];
+// const keyword = "lahmacun";
 
-Restaurant.find({
-    "description": { $regex: keyword, $options: "i" },
-    "address.location": {
-        $near: {
-            $geometry: {
-                type: "Point",
-                coordinates: coordinates
-            }
-        }
-    }
-})
-    .limit(5)
-    .exec((err, restaurants) => {
-        if (err) {
-            console.error(err);
-        } else {
-            console.log(restaurants);
-        }
-});
+// Restaurant.find({
+//     "description": { $regex: keyword, $options: "i" },
+//     "address.location": {
+//         $near: {
+//             $geometry: {
+//                 type: "Point",
+//                 coordinates: coordinates
+//             }
+//         }
+//     }
+// })
+//     .limit(5)
+//     .exec((err, restaurants) => {
+//         if (err) {
+//             console.error(err);
+//         } else {
+//             console.log(restaurants);
+//         }
+// });
 
 
 
@@ -129,21 +129,21 @@ Restaurant.find({
 
 //         const newMenuItems = [
 //             {
-//                 name: 'Small Cheese Pizza',
+//                 name: 'Küçük boy peynirli pizza',
 //                 price: 50,
-//                 content: 'Delicious small cheese pizza',
-//                 coverImage: 'small_cheese_pizza.jpg'
+//                 content: 'Lezzetli küçük boy peynirli pizza',
+//                 coverImage: 'kucuk_boy_pizza.jpg'
 //             },
 //             {
-//                 name: 'Medium Mushroom Pizza',
+//                 name: 'Orta boy mantarlı pizza',
 //                 price: 100,
-//                 content: 'Tasty medium mushroom pizza',
-//                 coverImage: 'medium_mushroom_pizza.jpg'
+//                 content: 'Leziz orta boy mantarlı pizzaa',
+//                 coverImage: 'orta_boy_mantarli.jpg'
 //             },
 //             {
 //                 name: 'Hamburger',
 //                 price: 120,
-//                 content: 'Juicy hamburger',
+//                 content: 'Taze hamburger',
 //                 coverImage: 'hamburger.jpg'
 //             }
 //         ];
@@ -156,7 +156,6 @@ Restaurant.find({
 //             .then(() => {
 //                 session.commitTransaction();
 //                 session.endSession();
-//                 console.log('Menu items added successfully');
 //             })
 //             .catch((error) => {
 //                 session.abortTransaction();
@@ -216,10 +215,9 @@ Restaurant.find({
 //         console.error('Failed to connect to the database:', error);
 //     });
 
-// // Create an Express app
 // const app = express();
 
-// // Define the endpoint for serving restaurants with pagination and sorted by average rating
+// // endpoint for serving restaurants with pagination and sorted by average rating
 // app.get('/restaurants', async (req, res) => {
 //     const page = parseInt(req.query.page) || 1; // Get the page number from the query parameter, default to 1 if not provided
 //     const limit = parseInt(req.query.limit) || 10; // Get the limit from the query parameter, default to 10 if not provided
@@ -247,7 +245,6 @@ Restaurant.find({
 //     }
 // });
 
-// // Start the server
 // app.listen(3000, () => {
 //     console.log('Server is running on port 3000');
 // });
@@ -255,5 +252,4 @@ Restaurant.find({
 
 
 
-// Export the models
 // module.exports = { User, Order, Restaurant };
