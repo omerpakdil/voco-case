@@ -8,37 +8,53 @@ import Restaurant from './model/Restaurant.js';
     To run each problem, remove it from the comment one by one and comment the other problems.
 */
 
-
-
-
 // Problem 2
+
+// Connect to the database
+
+mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('Connected to the database');
+    })
+    .catch((error) => {
+        console.error('Failed to connect to the database:', error);
+    }
+);
+
 
 const coordinates = [39.93, 32.85];
 const keyword = "lahmacun";
 
-Restaurant.find({
-    "description": { $regex: keyword, $options: "i" },
-    "address.location": {
-        $near: {
-            $geometry: {
-                type: "Point",
-                coordinates: coordinates
+
+Restaurant.collection.createIndex({ "address.location": "2dsphere" }, (error) => {
+    if (error) {
+        console.error('Failed to create index:', error);
+    } else {
+        console.log('Index created successfully');
+        
+        Restaurant.find({
+            "description": { $regex: keyword, $options: "i" },
+            "address.location": {
+                $near: {
+                    $geometry: {
+                        type: "Point",
+                        coordinates: coordinates
+                    }
+                }
             }
-        }
+        })
+            .limit(5)
+            .exec((err, restaurants) => {
+                if (err) {
+                    console.error(err);
+                } else {
+                    console.log(restaurants);
+                }
+        });
+
     }
-})
-    .limit(5)
-    .exec((err, restaurants) => {
-        if (err) {
-            console.error(err);
-        } else {
-            console.log(restaurants);
-        }
 });
 
-
-
-    
 
 // // Problem 3
 
