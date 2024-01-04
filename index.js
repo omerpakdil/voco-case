@@ -1,119 +1,38 @@
-
-const express = require('express');
-const mongoose = require('mongoose');
+import express from 'express';
+import mongoose from 'mongoose';
+import { User, Order, Restaurant } from './model/index.js';
 
 /*
     To run each problem, remove it from the comment one by one and comment the other problems.
 */
 
 
-// // Problem 1
-
-
-// // Connect to the database
-
-mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log('Connected to the database');
-    })
-    .catch((error) => {
-        console.error('Failed to connect to the database:', error);
-    });
-
-//  User collection
-
-const userSchema = new mongoose.Schema({
-    username: { type: String, required: true },
-    password: { type: String, required: true },
-    email: { type: String, required: true },
-    age: { type: Number, required: true },
-    gender: { type: String, required: true },
-    profilePicture: { type: String }
-});
-
-
-//  Order collection
-const orderSchema = new mongoose.Schema({
-    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    restaurant: { type: mongoose.Schema.Types.ObjectId, ref: 'Restaurant', required: true },
-    addresses: [{
-        city: { type: String, required: true },
-        district: { type: String, required: true },
-        fullAddress: { type: String, required: true },
-        location: {
-            type: { type: String, enum: ['Point'], default: 'Point' },
-            coordinates: { type: [Number], required: true },
-        },
-    }],
-    comment: { type: String },
-    score: { type: Number },
-    dateTime: { type: Date, default: Date.now },
-});
-
-
-//  Restaurant collection
-const restaurantSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    description: { type: String },
-    logo: { type: String },
-    address: {
-        city: { type: String, required: true },
-        district: { type: String, required: true },
-        fullAddress: { type: String, required: true },
-        location: {
-            type: { type: String, enum: ['Point'], default: 'Point' },
-            coordinates: { type: [Number], required: true },
-        },
-    },
-    branches: [{ 
-        city: { type: String, required: true },
-        district: { type: String, required: true },
-        fullAddress: { type: String, required: true },
-        location: {
-            type: { type: String, enum: ['Point'], default: 'Point' },
-            coordinates: { type: [Number], required: true },
-        },
-    }],
-    menu: [{
-        name: { type: String, required: true },
-        price: { type: Number, required: true },
-        content: { type: String },
-        coverImage: { type: String },
-    }],
-    types: [{ type: String }],
-});
-
-//  models based on the schemas
-const User = mongoose.model('User', userSchema);
-const Order = mongoose.model('Order', orderSchema);
-const Restaurant = mongoose.model('Restaurant', restaurantSchema);
-
 
 
 // Problem 2
 
-// const coordinates = [39.93, 32.85];
-// const keyword = "lahmacun";
+const coordinates = [39.93, 32.85];
+const keyword = "lahmacun";
 
-// Restaurant.find({
-//     "description": { $regex: keyword, $options: "i" },
-//     "address.location": {
-//         $near: {
-//             $geometry: {
-//                 type: "Point",
-//                 coordinates: coordinates
-//             }
-//         }
-//     }
-// })
-//     .limit(5)
-//     .exec((err, restaurants) => {
-//         if (err) {
-//             console.error(err);
-//         } else {
-//             console.log(restaurants);
-//         }
-// });
+Restaurant.find({
+    "description": { $regex: keyword, $options: "i" },
+    "address.location": {
+        $near: {
+            $geometry: {
+                type: "Point",
+                coordinates: coordinates
+            }
+        }
+    }
+})
+    .limit(5)
+    .exec((err, restaurants) => {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log(restaurants);
+        }
+});
 
 
 
