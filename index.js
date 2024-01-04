@@ -1,6 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import { User, Order, Restaurant } from './model/index.js';
+import User from './model/User.js';
+import Order from './model/Order.js';
+import Restaurant from './model/Restaurant.js';
 
 /*
     To run each problem, remove it from the comment one by one and comment the other problems.
